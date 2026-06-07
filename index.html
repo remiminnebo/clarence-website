@@ -129,8 +129,172 @@
     </div>
   </section>
 
+  <!-- ─── Multiplayer ──────────────────────────────────────────────────────── -->
+  <section class="multi-hero" id="features">
+    <div class="multi-hero-inner">
+      <div class="multi-eyebrow">// MULTIPLAYER · LIVE</div>
+      <h2 class="multi-title">The cockpit goes<br><em>multiplayer.</em></h2>
+      <p class="multi-sub">
+        Clarence is the only AI coding tool with real-time collaboration built in.
+        Watch a teammate's agent work live. Send it a task. Merge your cockpits into
+        one. All over an encrypted channel — no screen sharing required.
+      </p>
+    </div>
+
+    <!-- Observe -->
+    <div class="multi-mode" id="mode-observe">
+      <div class="multi-mode-copy">
+        <div class="multi-mode-tag" style="color: var(--mint)">OBSERVE</div>
+        <h3>Watch any agent,<br>live.</h3>
+        <p>Request to observe a friend's terminal. Their PTY output streams to a
+           live read-only xterm pane in your cockpit — every keystroke, every token.
+           The moment you want to know <em>how</em> they're tackling a problem, just
+           ask to observe.</p>
+        <ul class="multi-mode-bullets">
+          <li><span class="bullet-dot" style="background:var(--mint)"></span>Real-time terminal stream over Ably</li>
+          <li><span class="bullet-dot" style="background:var(--mint)"></span>Friend accepts or declines the request</li>
+          <li><span class="bullet-dot" style="background:var(--mint)"></span>LIVE badge · read-only · zero lag</li>
+        </ul>
+      </div>
+      <div class="multi-mode-visual">
+        <div class="mini-window">
+          <div class="mini-titlebar">
+            <span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span>
+            <span class="mini-ws">ada's session</span>
+          </div>
+          <div class="observe-mock">
+            <div class="observe-mock-header">
+              <span class="live-badge">LIVE</span>
+              <span class="observe-mock-title">ada · auth-refactor</span>
+            </div>
+            <div class="observe-mock-term">
+              <span class="prompt">$</span> claude --dangerously-skip-permissions<br>
+              <span class="dim">✓ Auth module loaded (14 files)</span><br>
+              <span class="mint">●</span> Rewriting middleware to use JWT...<br>
+              <span class="dim">  → src/middleware/auth.ts</span><br>
+              <span class="dim">  → src/middleware/auth.test.ts</span><br>
+              <span class="mint">●</span> Running tests (12/14 passing)<br>
+              <span class="yellow">◐</span> Fixing edge case in token refresh<span class="cursor">▌</span>
+            </div>
+          </div>
+        </div>
+        <div class="toast-mock">
+          <img class="toast-avatar-mock" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%230d1119'/%3E%3Ctext x='8' y='21' font-family='Georgia' font-size='14' fill='%234fffb0'%3Ea%3C/text%3E%3C/svg%3E" alt="">
+          <div>
+            <div class="toast-mock-title">ada wants you to observe</div>
+            <div class="toast-mock-sub">auth-refactor · 1 pane</div>
+          </div>
+          <div class="toast-mock-actions">
+            <span class="toast-accept">Accept</span>
+            <span class="toast-decline">Decline</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Handoff -->
+    <div class="multi-mode multi-mode-flip" id="mode-handoff">
+      <div class="multi-mode-copy">
+        <div class="multi-mode-tag" style="color: var(--yellow)">HANDOFF</div>
+        <h3>Pass a task to<br>any agent.</h3>
+        <p>Write a prompt and send it directly into a friend's agent session.
+           Their agent picks it up as the next instruction — no copy-paste, no Slack
+           messages, no context lost in translation. One click hands off the work.</p>
+        <ul class="multi-mode-bullets">
+          <li><span class="bullet-dot" style="background:var(--yellow)"></span>Prompt delivered straight to their PTY</li>
+          <li><span class="bullet-dot" style="background:var(--yellow)"></span>Recipient sees a toast to accept or decline</li>
+          <li><span class="bullet-dot" style="background:var(--yellow)"></span>Full context preserved end-to-end</li>
+        </ul>
+      </div>
+      <div class="multi-mode-visual">
+        <div class="mini-window">
+          <div class="mini-titlebar">
+            <span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span>
+            <span class="mini-ws">Send task · marcus</span>
+          </div>
+          <div class="task-mock">
+            <div class="task-mock-header">
+              <span class="task-mock-tag">// HANDOFF</span>
+              <span class="task-mock-to">Send task to marcus</span>
+            </div>
+            <div class="task-mock-body">
+              <div class="task-mock-textarea">
+                The API rate-limiter is breaking under load.<br>
+                The failing test is in src/api/limiter.test.ts.<br>
+                Can you look at it and fix the sliding window logic?
+              </div>
+              <div class="task-mock-hint">⌘↵ to send</div>
+            </div>
+            <div class="task-mock-footer">
+              <span class="task-mock-cancel">Cancel</span>
+              <span class="task-mock-send">Send task</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Co-pilot -->
+    <div class="multi-mode" id="mode-copilot">
+      <div class="multi-mode-copy">
+        <div class="multi-mode-tag" style="color: var(--blue)">CO-PILOT</div>
+        <h3>Merge cockpits.<br>Code together.</h3>
+        <p>Invite a friend to co-pilot. Both of your agent panes stream bidirectionally
+           into a shared workspace — you see theirs, they see yours.
+           One brain, two cockpits, every agent running in parallel.</p>
+        <ul class="multi-mode-bullets">
+          <li><span class="bullet-dot" style="background:var(--blue)"></span>Bidirectional stream — both sides see both sides</li>
+          <li><span class="bullet-dot" style="background:var(--blue)"></span>Live layout sync as panes open and close</li>
+          <li><span class="bullet-dot" style="background:var(--blue)"></span>Ends cleanly — streams stop, workspace closes</li>
+        </ul>
+      </div>
+      <div class="multi-mode-visual">
+        <div class="mini-window mini-window-wide">
+          <div class="mini-titlebar">
+            <span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span>
+            <span class="live-badge" style="margin-left:8px">LIVE</span>
+            <span class="mini-ws">co-pilot · ada</span>
+          </div>
+          <div class="copilot-mock-grid">
+            <div class="copilot-mock-tile">
+              <div class="copilot-tile-label"><span class="live-badge live-badge-sm">LIVE</span> ada · api-server</div>
+              <div class="pane-term" style="font-size:9.5px; padding:8px">
+                <span class="prompt">$</span> claude --dangerously-skip-permissions<br>
+                <span class="mint">●</span> Designing REST endpoints<br>
+                <span class="dim">  → src/api/routes.ts</span>
+              </div>
+            </div>
+            <div class="copilot-mock-tile">
+              <div class="copilot-tile-label"><span class="live-badge live-badge-sm">LIVE</span> ada · tests</div>
+              <div class="pane-term" style="font-size:9.5px; padding:8px">
+                <span class="prompt">$</span> claude --dangerously-skip-permissions<br>
+                <span class="mint">●</span> Writing integration tests<br>
+                <span class="dim">  22 passing / 1 failing</span>
+              </div>
+            </div>
+            <div class="copilot-mock-tile" style="border-color: var(--blue)">
+              <div class="copilot-tile-label"><span class="live-badge live-badge-sm" style="background:var(--blue);color:#04080c">LIVE</span> you · frontend</div>
+              <div class="pane-term" style="font-size:9.5px; padding:8px">
+                <span class="prompt">$</span> claude --dangerously-skip-permissions<br>
+                <span class="mint">●</span> Building API client layer<br>
+                <span class="dim">  → src/lib/api.ts</span>
+              </div>
+            </div>
+            <div class="copilot-mock-tile" style="border-color: var(--blue)">
+              <div class="copilot-tile-label"><span class="live-badge live-badge-sm" style="background:var(--blue);color:#04080c">LIVE</span> you · styles</div>
+              <div class="pane-term" style="font-size:9.5px; padding:8px">
+                <span class="prompt">$</span> opencode -c<br>
+                <span class="yellow">◐</span> Styling dashboard<span class="cursor">▌</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ─── Features ─────────────────────────────────────────────────────────── -->
-  <section class="features" id="features">
+  <section class="features" id="solo-features">
     <div class="features-grid">
 
       <div class="feature">
