@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clarence Code — Multi-agent coding cockpit</title>
+  <meta name="description" content="Run multiple AI coding agents side by side in a tiled terminal UI. Claude Code, opencode, and Codex — all in one cockpit." />
+  <meta property="og:title" content="Clarence Code" />
+  <meta property="og:description" content="Multi-agent coding cockpit for macOS." />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+</head>
+<body>
+
+  <!-- ─── Nav ──────────────────────────────────────────────────────────────── -->
+  <nav class="nav">
+    <span class="nav-wordmark">Clarence</span>
+    <div class="nav-links">
+      <a href="#features">Features</a>
+      <a href="https://github.com/remiminnebo/clarence-code" target="_blank" rel="noreferrer">GitHub</a>
+      <a href="https://github.com/remiminnebo/clarence-code/releases/latest" class="nav-download" target="_blank" rel="noreferrer">Download</a>
+    </div>
+  </nav>
+
+  <!-- ─── Hero ─────────────────────────────────────────────────────────────── -->
+  <section class="hero">
+    <div class="hero-eyebrow">// ALPHA · macOS</div>
+    <h1 class="hero-title">Your coding agents,<br><em>in formation.</em></h1>
+    <p class="hero-sub">
+      Clarence is a desktop cockpit for running multiple AI coding agents in
+      parallel — Claude Code, opencode, Codex — each in its own tiled terminal
+      pane. One window. Full control.
+    </p>
+    <div class="hero-actions">
+      <a href="https://github.com/remiminnebo/clarence-code/releases/latest/download/Clarence_aarch64.dmg"
+         class="btn-download" id="download-btn">
+        <svg class="apple-icon" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+        </svg>
+        Download for Mac
+        <span class="btn-sub">macOS · Apple Silicon &amp; Intel</span>
+      </a>
+      <a href="https://github.com/remiminnebo/clarence-code" class="btn-ghost" target="_blank" rel="noreferrer">
+        View on GitHub →
+      </a>
+    </div>
+    <p class="hero-note">Free and open source · Requires macOS 13+</p>
+  </section>
+
+  <!-- ─── Terminal mockup ───────────────────────────────────────────────────── -->
+  <section class="mockup-section">
+    <div class="mockup-window">
+      <div class="mockup-titlebar">
+        <span class="dot dot-red"></span>
+        <span class="dot dot-yellow"></span>
+        <span class="dot dot-green"></span>
+        <span class="mockup-ws-name">my-project</span>
+      </div>
+      <div class="mockup-body">
+        <div class="mockup-sidebar">
+          <div class="mock-brand">Clarence</div>
+          <div class="mock-section-label">WORKSPACES 2</div>
+          <div class="mock-ws-item active">
+            <span class="mock-ws-dot" style="background:#4fffb0"></span>
+            my-project
+          </div>
+          <div class="mock-ws-item">
+            <span class="mock-ws-dot" style="background:#e8ff3a"></span>
+            api-refactor
+          </div>
+          <div class="mock-section-label" style="margin-top:12px">AGENTS 4</div>
+          <div class="mock-agent">
+            <span class="mock-agent-kind">claude</span>
+            <span class="mock-status working">working</span>
+          </div>
+          <div class="mock-agent">
+            <span class="mock-agent-kind">claude</span>
+            <span class="mock-status idle">idle</span>
+          </div>
+          <div class="mock-agent">
+            <span class="mock-agent-kind">opencode</span>
+            <span class="mock-status working">working</span>
+          </div>
+          <div class="mock-agent">
+            <span class="mock-agent-kind">claude</span>
+            <span class="mock-status idle">idle</span>
+          </div>
+          <div class="mock-section-label" style="margin-top:12px">PULL REQUESTS 3</div>
+          <div class="mock-pr">#42 Add auth middleware</div>
+          <div class="mock-pr">#41 Fix rate limiting</div>
+          <div class="mock-pr">#39 Update deps</div>
+        </div>
+        <div class="mockup-panes">
+          <div class="mockup-pane focused">
+            <div class="pane-term">
+              <span class="prompt">$</span> claude --dangerously-skip-permissions<br>
+              <span class="dim">✓ Loading project context...</span><br>
+              <span class="mint">●</span> Refactoring auth module — 3 files changed<br>
+              <span class="dim">Running tests...</span>
+            </div>
+          </div>
+          <div class="mockup-pane">
+            <div class="pane-term">
+              <span class="prompt">$</span> claude --dangerously-skip-permissions<br>
+              <span class="dim">✓ Ready</span><br>
+              <span class="yellow">◐</span> Waiting for instructions<br>
+              <span class="cursor">▌</span>
+            </div>
+          </div>
+          <div class="mockup-pane">
+            <div class="pane-term">
+              <span class="prompt">$</span> opencode -c<br>
+              <span class="dim">✓ Context loaded (127 files)</span><br>
+              <span class="mint">●</span> Writing unit tests for UserService<br>
+              <span class="dim">  → src/services/user.test.ts</span>
+            </div>
+          </div>
+          <div class="mockup-pane">
+            <div class="pane-term">
+              <span class="prompt">$</span> claude --dangerously-skip-permissions<br>
+              <span class="dim">✓ Ready</span><br>
+              <span class="yellow">◐</span> Waiting for instructions<br>
+              <span class="cursor">▌</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Features ─────────────────────────────────────────────────────────── -->
+  <section class="features" id="features">
+    <div class="features-grid">
+
+      <div class="feature">
+        <div class="feature-icon">⊞</div>
+        <h3>Tiled panes</h3>
+        <p>Split your screen into 1, 2, 4, 6, 8, or 12 panes. Each runs a fully
+           independent PTY — resize, close, or zoom any pane with a keystroke.</p>
+      </div>
+
+      <div class="feature">
+        <div class="feature-icon">⟳</div>
+        <h3>Any agent</h3>
+        <p>Claude Code, opencode, Codex, or any CLI tool that speaks a terminal.
+           Mix and match agents across panes in the same workspace.</p>
+      </div>
+
+      <div class="feature">
+        <div class="feature-icon">◈</div>
+        <h3>Workspace isolation</h3>
+        <p>Group panes into named workspaces — each with its own repo, branch,
+           and layout. Switch contexts instantly; state persists across restarts.</p>
+      </div>
+
+      <div class="feature">
+        <div class="feature-icon">⊙</div>
+        <h3>GitHub PR review</h3>
+        <p>See your open PRs in the sidebar. Click one to inspect CI checks and
+           review comments, then spawn an agent to review it — or review all at once.</p>
+      </div>
+
+      <div class="feature">
+        <div class="feature-icon">●</div>
+        <h3>Friends &amp; presence</h3>
+        <p>See which of your GitHub mutual follows are running Clarence right now
+           and how many agents they have active. Ambient awareness, no chat required.</p>
+      </div>
+
+      <div class="feature">
+        <div class="feature-icon">◎</div>
+        <h3>Accent colors</h3>
+        <p>Each workspace gets its own color. Pane borders, sidebar indicators,
+           and agent groups all follow it — so your eyes never lose context.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ─── Open source ───────────────────────────────────────────────────────── -->
+  <section class="oss-section">
+    <div class="oss-inner">
+      <div class="oss-tag">// OPEN SOURCE</div>
+      <h2>Built in the open.</h2>
+      <p>Clarence is MIT-licensed. The Rust core, the Tauri backend, and every
+         line of the React frontend are on GitHub. File issues, fork it, ship improvements.</p>
+      <a href="https://github.com/remiminnebo/clarence-code" class="btn-outline" target="_blank" rel="noreferrer">
+        github.com/remiminnebo/clarence-code →
+      </a>
+    </div>
+  </section>
+
+  <!-- ─── CTA ──────────────────────────────────────────────────────────────── -->
+  <section class="cta-section">
+    <h2>Ready to run your agents?</h2>
+    <a href="https://github.com/remiminnebo/clarence-code/releases/latest/download/Clarence_aarch64.dmg"
+       class="btn-download btn-download-large">
+      <svg class="apple-icon" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+      </svg>
+      Download for Mac
+      <span class="btn-sub">Free · Open source · macOS 13+</span>
+    </a>
+  </section>
+
+  <!-- ─── Footer ───────────────────────────────────────────────────────────── -->
+  <footer class="footer">
+    <span class="footer-wordmark">Clarence</span>
+    <div class="footer-links">
+      <a href="https://github.com/remiminnebo/clarence-code" target="_blank" rel="noreferrer">GitHub</a>
+      <a href="https://github.com/remiminnebo/clarence-code/releases" target="_blank" rel="noreferrer">Releases</a>
+      <a href="https://github.com/remiminnebo/clarence-code/issues" target="_blank" rel="noreferrer">Issues</a>
+    </div>
+    <span class="footer-copy">MIT License</span>
+  </footer>
+
+</body>
+</html>
