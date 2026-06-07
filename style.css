@@ -1002,6 +1002,180 @@ a { color: inherit; text-decoration: none; }
   margin-bottom: 36px;
 }
 
+/* ─── Knowledge graph section ────────────────────────────────────────────── */
+
+.kg-section {
+  border-top: 1px solid var(--border);
+  padding: 100px 40px;
+  background: linear-gradient(180deg, rgba(77,175,254,0.03) 0%, transparent 100%);
+}
+
+.kg-inner {
+  max-width: 1060px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 72px;
+  align-items: center;
+}
+
+.kg-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: var(--blue);
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  opacity: 0.8;
+}
+
+.kg-title {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: clamp(30px, 4vw, 46px);
+  line-height: 1.1;
+  letter-spacing: -1px;
+  color: var(--text-hi);
+  margin-bottom: 18px;
+}
+
+.kg-title em {
+  font-style: italic;
+  color: var(--blue);
+}
+
+.kg-body {
+  font-size: 15px;
+  color: var(--text-mid);
+  line-height: 1.7;
+  margin-bottom: 28px;
+}
+
+.kg-bullets {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.kg-bullets li {
+  display: flex;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--text-mid);
+  line-height: 1.55;
+}
+
+.kg-bullets strong { color: var(--text-hi); font-weight: 600; }
+
+.kg-bullet-icon {
+  color: var(--blue);
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* ─── KG graph mockup ────────────────────────────────────────────────────── */
+
+.kg-graph-mock {
+  border: 1px solid rgba(77,175,254,0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--bg-card);
+  box-shadow: 0 0 40px rgba(77,175,254,0.05), 0 20px 60px rgba(0,0,0,0.4);
+}
+
+.kg-graph-header {
+  background: rgba(77,175,254,0.06);
+  border-bottom: 1px solid rgba(77,175,254,0.12);
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.kg-graph-tag {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  color: var(--blue);
+  font-weight: 600;
+}
+
+.kg-graph-sub {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  color: var(--text-ghost);
+}
+
+.kg-graph-body {
+  padding: 16px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.kg-node {
+  border-radius: 6px;
+  border: 1px solid var(--border-hover);
+  padding: 8px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.kg-node-decision { border-color: rgba(79,255,176,0.2); background: rgba(79,255,176,0.03); }
+.kg-node-attempt  { border-color: rgba(255,112,48,0.2); background: rgba(255,112,48,0.03); }
+.kg-node-file     { border-color: rgba(77,175,254,0.2); background: rgba(77,175,254,0.03); }
+
+.kg-node-kind {
+  font-family: var(--font-mono);
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--text-ghost);
+}
+.kg-node-decision .kg-node-kind { color: var(--mint); }
+.kg-node-attempt  .kg-node-kind { color: var(--orange); }
+.kg-node-file     .kg-node-kind { color: var(--blue); }
+
+.kg-node-label {
+  font-size: 12px;
+  color: var(--text-hi);
+  font-weight: 500;
+}
+
+.kg-node-meta {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  color: var(--text-ghost);
+}
+
+.kg-edge {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  color: var(--text-ghost);
+  padding: 2px 12px;
+  letter-spacing: 0.5px;
+}
+
+.kg-conflict {
+  margin-top: 4px;
+  background: rgba(232,255,58,0.06);
+  border: 1px solid rgba(232,255,58,0.2);
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--yellow);
+  display: flex;
+  align-items: flex-start;
+  gap: 7px;
+  line-height: 1.5;
+}
+
+.kg-conflict-icon { flex-shrink: 0; }
+
 /* ─── Bottom CTA ─────────────────────────────────────────────────────────── */
 
 .bottom-section {
@@ -1069,6 +1243,10 @@ a { color: inherit; text-decoration: none; }
 }
 
 /* ─── Responsive ─────────────────────────────────────────────────────────── */
+
+@media (max-width: 900px) {
+  .kg-inner { grid-template-columns: 1fr; gap: 48px; }
+}
 
 @media (max-width: 700px) {
   .nav { padding: 0 20px; }

@@ -321,6 +321,59 @@
 
   </section>
 
+  <!-- ─── Knowledge graph ─────────────────────────────────────────────────── -->
+  <section class="kg-section">
+    <div class="kg-inner">
+      <div class="kg-left">
+        <div class="kg-eyebrow">// COMING SOON · PHASE 2</div>
+        <h2 class="kg-title">Agents that share<br><em>understanding.</em></h2>
+        <p class="kg-body">
+          Most multi-agent tools coordinate at the process level — they know an agent is
+          blocked. Clarence goes deeper. A local knowledge graph lets agents hand off
+          semantic context: decisions made, files owned, approaches tried and failed.
+          Agent B picks up where Agent A left off without rediscovering the same ground.
+        </p>
+        <ul class="kg-bullets">
+          <li><span class="kg-bullet-icon">◈</span> <strong>Decisions persist.</strong> Agent A records "chose Zustand for state" — Agent B reads it before touching the same code.</li>
+          <li><span class="kg-bullet-icon">◈</span> <strong>File ownership.</strong> The graph tracks which agent owns which file. Clarence warns before two agents collide on the same path.</li>
+          <li><span class="kg-bullet-icon">◈</span> <strong>MCP native.</strong> Any MCP-capable agent — Claude Code, opencode — can read and write the graph via a local MCP server.</li>
+          <li><span class="kg-bullet-icon">◈</span> <strong>Local first.</strong> Postgres + pgvector, runs in Docker on your machine. Nothing leaves.</li>
+        </ul>
+      </div>
+      <div class="kg-right">
+        <div class="kg-graph-mock">
+          <div class="kg-graph-header">
+            <span class="kg-graph-tag">// KNOWLEDGE GRAPH</span>
+            <span class="kg-graph-sub">my-project · 4 agents · 12 nodes</span>
+          </div>
+          <div class="kg-graph-body">
+            <div class="kg-node kg-node-decision">
+              <span class="kg-node-kind">Decision</span>
+              <span class="kg-node-label">Use Zustand for auth state</span>
+              <span class="kg-node-meta">claude-1 · 14m ago</span>
+            </div>
+            <div class="kg-edge">↓ SUPERSEDES</div>
+            <div class="kg-node kg-node-attempt" style="opacity:0.5">
+              <span class="kg-node-kind">Attempt</span>
+              <span class="kg-node-label">Redux approach — failed</span>
+              <span class="kg-node-meta">claude-1 · 22m ago · ✗</span>
+            </div>
+            <div class="kg-edge">↓ SCOPED TO</div>
+            <div class="kg-node kg-node-file">
+              <span class="kg-node-kind">File</span>
+              <span class="kg-node-label">src/store/auth.ts</span>
+              <span class="kg-node-meta">OWNED BY claude-1</span>
+            </div>
+            <div class="kg-conflict">
+              <span class="kg-conflict-icon">⚠</span>
+              claude-3 about to touch src/store/auth.ts — owned by claude-1
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ─── Bottom CTA ────────────────────────────────────────────────────────── -->
   <section class="bottom-section">
     <div class="bottom-inner">
