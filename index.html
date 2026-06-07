@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Clarence Code — Multi-agent coding cockpit</title>
-  <meta name="description" content="Run multiple AI coding agents side by side in a tiled terminal UI. Claude Code, opencode, and Codex — all in one cockpit." />
+  <title>Clarence Code · Multi-agent coding cockpit</title>
+  <meta name="description" content="Run multiple AI coding agents side by side in a tiled terminal UI. Claude Code, opencode, and Codex, all in one cockpit." />
   <meta property="og:title" content="Clarence Code" />
   <meta property="og:description" content="Multi-agent coding cockpit for macOS." />
   <meta property="og:type" content="website" />
@@ -29,7 +29,7 @@
     <h1 class="hero-title">Your coding agents,<br><em>in formation.</em></h1>
     <p class="hero-sub">
       Run Claude Code, opencode, and Codex side by side in a tiled terminal cockpit.
-      And when you're ready — observe a teammate's agent live, hand off a task, or
+      And when you're ready   observe a teammate's agent live, hand off a task, or
       merge cockpits and code together in real time.
     </p>
 
@@ -65,7 +65,7 @@
         <span class="dot dot-red"></span>
         <span class="dot dot-yellow"></span>
         <span class="dot dot-green"></span>
-        <span class="mockup-ws-name">clarence — my-project</span>
+        <span class="mockup-ws-name">clarence · my-project</span>
       </div>
       <div class="mockup-body">
 
@@ -193,7 +193,7 @@
       <div class="multi-mode-copy">
         <div class="multi-mode-tag" style="color:var(--mint)">OBSERVE</div>
         <h3>Watch any agent, live.</h3>
-        <p>Request to observe a friend's terminal. Their PTY output streams into a live read-only pane in your cockpit — every token, in real time. Ask once, see everything.</p>
+        <p>Request to observe a friend's terminal. Their PTY output streams into a live read-only pane in your cockpit   every token, in real time. Ask once, see everything.</p>
         <ul class="multi-mode-bullets">
           <li><span class="bullet-dot" style="background:var(--mint)"></span>Live terminal stream · LIVE badge · read-only</li>
           <li><span class="bullet-dot" style="background:var(--mint)"></span>Friend accepts or declines with one click</li>
@@ -236,7 +236,7 @@
       <div class="multi-mode-copy">
         <div class="multi-mode-tag" style="color:var(--yellow)">HANDOFF</div>
         <h3>Pass a task to any agent.</h3>
-        <p>Write a prompt and send it straight into a friend's agent session. Their agent picks it up as the next instruction — no Slack, no copy-paste, no context lost.</p>
+        <p>Write a prompt and send it straight into a friend's agent session. Their agent picks it up as the next instruction   no Slack, no copy-paste, no context lost.</p>
         <ul class="multi-mode-bullets">
           <li><span class="bullet-dot" style="background:var(--yellow)"></span>Prompt delivered straight to their PTY</li>
           <li><span class="bullet-dot" style="background:var(--yellow)"></span>Recipient sees a toast · accept or decline</li>
@@ -269,7 +269,7 @@
       <div class="multi-mode-copy">
         <div class="multi-mode-tag" style="color:var(--blue)">CO-PILOT</div>
         <h3>Merge cockpits. Code together.</h3>
-        <p>Invite a friend to co-pilot. Both of your panes stream bidirectionally into a shared workspace — you see theirs, they see yours, every agent running in parallel.</p>
+        <p>Invite a friend to co-pilot. Both of your panes stream bidirectionally into a shared workspace   you see theirs, they see yours, every agent running in parallel.</p>
         <ul class="multi-mode-bullets">
           <li><span class="bullet-dot" style="background:var(--blue)"></span>Bidirectional · both sides see both sides</li>
           <li><span class="bullet-dot" style="background:var(--blue)"></span>Layout syncs live as panes open and close</li>
@@ -328,15 +328,15 @@
         <div class="kg-eyebrow">// COMING SOON · PHASE 2</div>
         <h2 class="kg-title">Agents that share<br><em>understanding.</em></h2>
         <p class="kg-body">
-          Most multi-agent tools coordinate at the process level — they know an agent is
+          Most multi-agent tools coordinate at the process level   they know an agent is
           blocked. Clarence goes deeper. A local knowledge graph lets agents hand off
           semantic context: decisions made, files owned, approaches tried and failed.
           Agent B picks up where Agent A left off without rediscovering the same ground.
         </p>
         <ul class="kg-bullets">
-          <li><span class="kg-bullet-icon">◈</span> <strong>Decisions persist.</strong> Agent A records "chose Zustand for state" — Agent B reads it before touching the same code.</li>
+          <li><span class="kg-bullet-icon">◈</span> <strong>Decisions persist.</strong> Agent A records "chose Zustand for state"   Agent B reads it before touching the same code.</li>
           <li><span class="kg-bullet-icon">◈</span> <strong>File ownership.</strong> The graph tracks which agent owns which file. Clarence warns before two agents collide on the same path.</li>
-          <li><span class="kg-bullet-icon">◈</span> <strong>MCP native.</strong> Any MCP-capable agent — Claude Code, opencode — can read and write the graph via a local MCP server.</li>
+          <li><span class="kg-bullet-icon">◈</span> <strong>MCP native.</strong> Any MCP-capable agent   Claude Code, opencode   can read and write the graph via a local MCP server.</li>
           <li><span class="kg-bullet-icon">◈</span> <strong>Local first.</strong> Postgres + pgvector, runs in Docker on your machine. Nothing leaves.</li>
         </ul>
       </div>
@@ -355,7 +355,7 @@
             <div class="kg-edge">↓ SUPERSEDES</div>
             <div class="kg-node kg-node-attempt" style="opacity:0.5">
               <span class="kg-node-kind">Attempt</span>
-              <span class="kg-node-label">Redux approach — failed</span>
+              <span class="kg-node-label">Redux approach   failed</span>
               <span class="kg-node-meta">claude-1 · 22m ago · ✗</span>
             </div>
             <div class="kg-edge">↓ SCOPED TO</div>
@@ -366,7 +366,7 @@
             </div>
             <div class="kg-conflict">
               <span class="kg-conflict-icon">⚠</span>
-              claude-3 about to touch src/store/auth.ts — owned by claude-1
+              claude-3 about to touch src/store/auth.ts   owned by claude-1
             </div>
           </div>
         </div>
