@@ -65,63 +65,116 @@
         <span class="dot dot-red"></span>
         <span class="dot dot-yellow"></span>
         <span class="dot dot-green"></span>
-        <span class="mockup-ws-name">my-project</span>
+        <span class="mockup-ws-name">clarence — my-project</span>
       </div>
       <div class="mockup-body">
+
+        <!-- Sidebar -->
         <div class="mockup-sidebar">
           <div class="mock-brand">Clarence</div>
-          <div class="mock-section-label">WORKSPACES 2</div>
-          <div class="mock-ws-item active">
-            <span class="mock-ws-dot" style="background:#4fffb0"></span>
-            my-project
+          <div class="mock-tagline">CODE · COCKPIT</div>
+
+          <!-- Tab bar -->
+          <div class="mock-tabs">
+            <span class="mock-tab active">Workspaces</span>
+            <span class="mock-tab">Friends <span class="mock-tab-badge">2</span></span>
           </div>
-          <div class="mock-ws-item">
-            <span class="mock-ws-dot" style="background:#e8ff3a"></span>
-            api-refactor
+
+          <!-- Workspaces -->
+          <div class="mock-section-header">
+            <span>Workspaces <span class="mock-count">2</span></span>
+            <span class="mock-add">+</span>
           </div>
-          <div class="mock-section-label" style="margin-top:12px">AGENTS 4</div>
-          <div class="mock-agent"><span class="mock-agent-kind">claude</span><span class="mock-status working">working</span></div>
-          <div class="mock-agent"><span class="mock-agent-kind">claude</span><span class="mock-status idle">idle</span></div>
-          <div class="mock-agent"><span class="mock-agent-kind">opencode</span><span class="mock-status working">working</span></div>
-          <div class="mock-agent"><span class="mock-agent-kind">claude</span><span class="mock-status idle">idle</span></div>
-          <div class="mock-section-label" style="margin-top:12px">FRIENDS 2 online</div>
-          <div class="mock-friend"><span class="mock-friend-dot online"></span>ada <span class="mock-friend-count">3 agents</span></div>
-          <div class="mock-friend"><span class="mock-friend-dot online"></span>marcus <span class="mock-friend-count">1 agent</span></div>
+
+          <div class="mock-ws-card focused" style="--accent:#4fffb0">
+            <div class="mock-ws-card-top">
+              <span class="mock-ws-name-text">my-project</span>
+            </div>
+            <div class="mock-ws-meta">main · ~/git/my-project</div>
+          </div>
+          <div class="mock-ws-card" style="--accent:#e8ff3a">
+            <div class="mock-ws-card-top">
+              <span class="mock-ws-name-text" style="color:var(--text-hi)">api-refactor</span>
+            </div>
+            <div class="mock-ws-meta">feat/rate-limit · ~/git/api</div>
+          </div>
+
+          <hr class="mock-divider">
+
+          <!-- Agents -->
+          <div class="mock-section-header">
+            <span>Agents <span class="mock-count">4</span></span>
+          </div>
+          <div class="mock-agent-group" style="--accent:#4fffb0">
+            <div class="mock-group-name"><span class="mock-group-bar"></span>my-project</div>
+            <div class="mock-agent-row"><span class="mock-agent-kind">claude</span><span class="mock-status working">working</span></div>
+            <div class="mock-agent-row"><span class="mock-agent-kind">claude</span><span class="mock-status idle">idle</span></div>
+            <div class="mock-agent-row"><span class="mock-agent-kind">opencode</span><span class="mock-status working">working</span></div>
+            <div class="mock-agent-row"><span class="mock-agent-kind">claude</span><span class="mock-status idle">idle</span></div>
+          </div>
+
+          <hr class="mock-divider">
+
+          <!-- PRs -->
+          <div class="mock-section-header">
+            <span>Pull Requests <span class="mock-count">3</span></span>
+          </div>
+          <div class="mock-pr-row">
+            <span class="mock-pr-num">#42</span>
+            <div class="mock-pr-content">
+              <span class="mock-pr-title">Add auth middleware</span>
+              <span class="mock-pr-repo">remiminnebo/my-project</span>
+            </div>
+          </div>
+          <div class="mock-pr-row">
+            <span class="mock-pr-num">#41</span>
+            <div class="mock-pr-content">
+              <span class="mock-pr-title">Fix rate limiting</span>
+              <span class="mock-pr-repo">remiminnebo/api</span>
+            </div>
+          </div>
         </div>
+
+        <!-- Panes -->
         <div class="mockup-panes">
-          <div class="mockup-pane focused">
+          <div class="mockup-pane focused" style="--accent:#4fffb0">
             <div class="pane-term">
-              <span class="prompt">$</span> claude --dangerously-skip-permissions<br>
-              <span class="dim">✓ Loading project context...</span><br>
-              <span class="mint">●</span> Refactoring auth module — 3 files<br>
-              <span class="dim">Running tests...</span>
+              <span class="dim">╭─ Claude Code ─────────────────────────────╮</span><br>
+              <span class="prompt">●</span> <span style="color:#f0f4f8">Refactoring auth module</span><br>
+              <span class="dim">  ├ Updating src/middleware/auth.ts</span><br>
+              <span class="dim">  ├ Updating src/middleware/auth.test.ts</span><br>
+              <span class="mint">  └ Running tests... 14/14 passing</span>
             </div>
           </div>
           <div class="mockup-pane">
             <div class="pane-term">
-              <span class="prompt">$</span> claude --dangerously-skip-permissions<br>
-              <span class="dim">✓ Ready</span><br>
-              <span class="yellow">◐</span> Waiting for instructions<br>
+              <span class="dim">╭─ Claude Code ─────────────────────────────╮</span><br>
+              <span class="yellow">◎</span> <span style="color:#6b7588">Waiting for task</span><br>
+              <br>
+              <span class="dim">  Type a message or press ↵</span><br>
               <span class="cursor">▌</span>
             </div>
           </div>
           <div class="mockup-pane">
             <div class="pane-term">
-              <span class="prompt">$</span> opencode -c<br>
-              <span class="dim">✓ Context loaded (127 files)</span><br>
-              <span class="mint">●</span> Writing unit tests<br>
-              <span class="dim">  → src/services/user.test.ts</span>
+              <span class="dim">  opencode v0.1.0</span><br>
+              <span class="dim">  127 files · ~/git/my-project</span><br>
+              <span class="mint">●</span> <span style="color:#f0f4f8">Writing unit tests for UserService</span><br>
+              <span class="dim">  → src/services/user.test.ts</span><br>
+              <span class="dim">  → 22 test cases</span>
             </div>
           </div>
           <div class="mockup-pane">
             <div class="pane-term">
-              <span class="prompt">$</span> claude --dangerously-skip-permissions<br>
-              <span class="dim">✓ Ready</span><br>
-              <span class="yellow">◐</span> Waiting for instructions<br>
+              <span class="dim">╭─ Claude Code ─────────────────────────────╮</span><br>
+              <span class="yellow">◎</span> <span style="color:#6b7588">Waiting for task</span><br>
+              <br>
+              <span class="dim">  Type a message or press ↵</span><br>
               <span class="cursor">▌</span>
             </div>
           </div>
         </div>
+
       </div>
     </div>
   </section>
