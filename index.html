@@ -17,7 +17,7 @@
   <nav class="nav">
     <span class="nav-wordmark">Clarence</span>
     <div class="nav-links">
-      <a href="#features">Features</a>
+      <a href="#multiplayer">Multiplayer</a>
       <a href="https://github.com/remiminnebo/clarence-code" target="_blank" rel="noreferrer">GitHub</a>
       <a href="https://github.com/remiminnebo/clarence-code/releases/latest" class="nav-download" target="_blank" rel="noreferrer">Download</a>
     </div>
@@ -25,30 +25,38 @@
 
   <!-- ─── Hero ─────────────────────────────────────────────────────────────── -->
   <section class="hero">
-    <div class="hero-eyebrow">// ALPHA · macOS</div>
+    <div class="hero-eyebrow">// ALPHA · macOS · FREE &amp; OPEN SOURCE</div>
     <h1 class="hero-title">Your coding agents,<br><em>in formation.</em></h1>
     <p class="hero-sub">
-      Clarence is a desktop cockpit for running multiple AI coding agents in
-      parallel — Claude Code, opencode, Codex — each in its own tiled terminal
-      pane. One window. Full control.
+      Run Claude Code, opencode, and Codex side by side in a tiled terminal cockpit.
+      And when you're ready — observe a teammate's agent live, hand off a task, or
+      merge cockpits and code together in real time.
     </p>
+
+    <div class="hero-pills">
+      <span class="pill pill-mint">Observe</span>
+      <span class="pill-sep">·</span>
+      <span class="pill pill-yellow">Handoff</span>
+      <span class="pill-sep">·</span>
+      <span class="pill pill-blue">Co-pilot</span>
+    </div>
+
     <div class="hero-actions">
       <a href="https://github.com/remiminnebo/clarence-code/releases/latest/download/Clarence_aarch64.dmg"
-         class="btn-download" id="download-btn">
+         class="btn-download">
         <svg class="apple-icon" viewBox="0 0 24 24" fill="currentColor">
           <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
         </svg>
         Download for Mac
-        <span class="btn-sub">macOS · Apple Silicon &amp; Intel</span>
+        <span class="btn-sub">Apple Silicon &amp; Intel · macOS 13+</span>
       </a>
       <a href="https://github.com/remiminnebo/clarence-code" class="btn-ghost" target="_blank" rel="noreferrer">
         View on GitHub →
       </a>
     </div>
-    <p class="hero-note">Free and open source · Requires macOS 13+</p>
   </section>
 
-  <!-- ─── Terminal mockup ───────────────────────────────────────────────────── -->
+  <!-- ─── App mockup ────────────────────────────────────────────────────────── -->
   <section class="mockup-section">
     <div class="mockup-window">
       <div class="mockup-titlebar">
@@ -70,33 +78,20 @@
             api-refactor
           </div>
           <div class="mock-section-label" style="margin-top:12px">AGENTS 4</div>
-          <div class="mock-agent">
-            <span class="mock-agent-kind">claude</span>
-            <span class="mock-status working">working</span>
-          </div>
-          <div class="mock-agent">
-            <span class="mock-agent-kind">claude</span>
-            <span class="mock-status idle">idle</span>
-          </div>
-          <div class="mock-agent">
-            <span class="mock-agent-kind">opencode</span>
-            <span class="mock-status working">working</span>
-          </div>
-          <div class="mock-agent">
-            <span class="mock-agent-kind">claude</span>
-            <span class="mock-status idle">idle</span>
-          </div>
-          <div class="mock-section-label" style="margin-top:12px">PULL REQUESTS 3</div>
-          <div class="mock-pr">#42 Add auth middleware</div>
-          <div class="mock-pr">#41 Fix rate limiting</div>
-          <div class="mock-pr">#39 Update deps</div>
+          <div class="mock-agent"><span class="mock-agent-kind">claude</span><span class="mock-status working">working</span></div>
+          <div class="mock-agent"><span class="mock-agent-kind">claude</span><span class="mock-status idle">idle</span></div>
+          <div class="mock-agent"><span class="mock-agent-kind">opencode</span><span class="mock-status working">working</span></div>
+          <div class="mock-agent"><span class="mock-agent-kind">claude</span><span class="mock-status idle">idle</span></div>
+          <div class="mock-section-label" style="margin-top:12px">FRIENDS 2 online</div>
+          <div class="mock-friend"><span class="mock-friend-dot online"></span>ada <span class="mock-friend-count">3 agents</span></div>
+          <div class="mock-friend"><span class="mock-friend-dot online"></span>marcus <span class="mock-friend-count">1 agent</span></div>
         </div>
         <div class="mockup-panes">
           <div class="mockup-pane focused">
             <div class="pane-term">
               <span class="prompt">$</span> claude --dangerously-skip-permissions<br>
               <span class="dim">✓ Loading project context...</span><br>
-              <span class="mint">●</span> Refactoring auth module — 3 files changed<br>
+              <span class="mint">●</span> Refactoring auth module — 3 files<br>
               <span class="dim">Running tests...</span>
             </div>
           </div>
@@ -112,7 +107,7 @@
             <div class="pane-term">
               <span class="prompt">$</span> opencode -c<br>
               <span class="dim">✓ Context loaded (127 files)</span><br>
-              <span class="mint">●</span> Writing unit tests for UserService<br>
+              <span class="mint">●</span> Writing unit tests<br>
               <span class="dim">  → src/services/user.test.ts</span>
             </div>
           </div>
@@ -130,30 +125,23 @@
   </section>
 
   <!-- ─── Multiplayer ──────────────────────────────────────────────────────── -->
-  <section class="multi-hero" id="features">
-    <div class="multi-hero-inner">
-      <div class="multi-eyebrow">// MULTIPLAYER · LIVE</div>
+  <section class="multi-section" id="multiplayer">
+
+    <div class="multi-intro">
+      <div class="multi-eyebrow">// MULTIPLAYER · REAL-TIME</div>
       <h2 class="multi-title">The cockpit goes<br><em>multiplayer.</em></h2>
-      <p class="multi-sub">
-        Clarence is the only AI coding tool with real-time collaboration built in.
-        Watch a teammate's agent work live. Send it a task. Merge your cockpits into
-        one. All over an encrypted channel — no screen sharing required.
-      </p>
+      <p class="multi-sub">The only AI coding tool where you can watch a teammate's agent work live, hand off a task with one prompt, or merge your cockpits into a shared workspace. No screen sharing. No context lost.</p>
     </div>
 
     <!-- Observe -->
-    <div class="multi-mode" id="mode-observe">
+    <div class="multi-mode">
       <div class="multi-mode-copy">
-        <div class="multi-mode-tag" style="color: var(--mint)">OBSERVE</div>
-        <h3>Watch any agent,<br>live.</h3>
-        <p>Request to observe a friend's terminal. Their PTY output streams to a
-           live read-only xterm pane in your cockpit — every keystroke, every token.
-           The moment you want to know <em>how</em> they're tackling a problem, just
-           ask to observe.</p>
+        <div class="multi-mode-tag" style="color:var(--mint)">OBSERVE</div>
+        <h3>Watch any agent, live.</h3>
+        <p>Request to observe a friend's terminal. Their PTY output streams into a live read-only pane in your cockpit — every token, in real time. Ask once, see everything.</p>
         <ul class="multi-mode-bullets">
-          <li><span class="bullet-dot" style="background:var(--mint)"></span>Real-time terminal stream over Ably</li>
-          <li><span class="bullet-dot" style="background:var(--mint)"></span>Friend accepts or declines the request</li>
-          <li><span class="bullet-dot" style="background:var(--mint)"></span>LIVE badge · read-only · zero lag</li>
+          <li><span class="bullet-dot" style="background:var(--mint)"></span>Live terminal stream · LIVE badge · read-only</li>
+          <li><span class="bullet-dot" style="background:var(--mint)"></span>Friend accepts or declines with one click</li>
         </ul>
       </div>
       <div class="multi-mode-visual">
@@ -162,94 +150,78 @@
             <span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span>
             <span class="mini-ws">ada's session</span>
           </div>
-          <div class="observe-mock">
-            <div class="observe-mock-header">
-              <span class="live-badge">LIVE</span>
-              <span class="observe-mock-title">ada · auth-refactor</span>
-            </div>
-            <div class="observe-mock-term">
-              <span class="prompt">$</span> claude --dangerously-skip-permissions<br>
-              <span class="dim">✓ Auth module loaded (14 files)</span><br>
-              <span class="mint">●</span> Rewriting middleware to use JWT...<br>
-              <span class="dim">  → src/middleware/auth.ts</span><br>
-              <span class="dim">  → src/middleware/auth.test.ts</span><br>
-              <span class="mint">●</span> Running tests (12/14 passing)<br>
-              <span class="yellow">◐</span> Fixing edge case in token refresh<span class="cursor">▌</span>
-            </div>
+          <div class="observe-mock-header">
+            <span class="live-badge">LIVE</span>
+            <span class="observe-mock-title">ada · auth-refactor</span>
           </div>
-        </div>
-        <div class="toast-mock">
-          <img class="toast-avatar-mock" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%230d1119'/%3E%3Ctext x='8' y='21' font-family='Georgia' font-size='14' fill='%234fffb0'%3Ea%3C/text%3E%3C/svg%3E" alt="">
-          <div>
-            <div class="toast-mock-title">ada wants you to observe</div>
-            <div class="toast-mock-sub">auth-refactor · 1 pane</div>
+          <div class="observe-mock-term">
+            <span class="prompt">$</span> claude --dangerously-skip-permissions<br>
+            <span class="dim">✓ Auth module loaded (14 files)</span><br>
+            <span class="mint">●</span> Rewriting middleware to use JWT...<br>
+            <span class="dim">  → src/middleware/auth.ts</span><br>
+            <span class="yellow">◐</span> Fixing edge case in token refresh<span class="cursor">▌</span>
           </div>
-          <div class="toast-mock-actions">
-            <span class="toast-accept">Accept</span>
-            <span class="toast-decline">Decline</span>
+          <div class="toast-mock">
+            <img class="toast-avatar-mock" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%230d1119'/%3E%3Ctext x='8' y='21' font-family='Georgia' font-size='14' fill='%234fffb0'%3Ea%3C/text%3E%3C/svg%3E" alt="">
+            <div>
+              <div class="toast-mock-title">ada wants you to observe</div>
+              <div class="toast-mock-sub">auth-refactor · 1 pane</div>
+            </div>
+            <div class="toast-mock-actions">
+              <span class="toast-accept">Accept</span>
+              <span class="toast-decline">Decline</span>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
     <!-- Handoff -->
-    <div class="multi-mode multi-mode-flip" id="mode-handoff">
+    <div class="multi-mode multi-mode-flip">
       <div class="multi-mode-copy">
-        <div class="multi-mode-tag" style="color: var(--yellow)">HANDOFF</div>
-        <h3>Pass a task to<br>any agent.</h3>
-        <p>Write a prompt and send it directly into a friend's agent session.
-           Their agent picks it up as the next instruction — no copy-paste, no Slack
-           messages, no context lost in translation. One click hands off the work.</p>
+        <div class="multi-mode-tag" style="color:var(--yellow)">HANDOFF</div>
+        <h3>Pass a task to any agent.</h3>
+        <p>Write a prompt and send it straight into a friend's agent session. Their agent picks it up as the next instruction — no Slack, no copy-paste, no context lost.</p>
         <ul class="multi-mode-bullets">
           <li><span class="bullet-dot" style="background:var(--yellow)"></span>Prompt delivered straight to their PTY</li>
-          <li><span class="bullet-dot" style="background:var(--yellow)"></span>Recipient sees a toast to accept or decline</li>
-          <li><span class="bullet-dot" style="background:var(--yellow)"></span>Full context preserved end-to-end</li>
+          <li><span class="bullet-dot" style="background:var(--yellow)"></span>Recipient sees a toast · accept or decline</li>
         </ul>
       </div>
       <div class="multi-mode-visual">
         <div class="mini-window">
           <div class="mini-titlebar">
             <span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span>
-            <span class="mini-ws">Send task · marcus</span>
+            <span class="mini-ws">// HANDOFF · Send task to marcus</span>
           </div>
-          <div class="task-mock">
-            <div class="task-mock-header">
-              <span class="task-mock-tag">// HANDOFF</span>
-              <span class="task-mock-to">Send task to marcus</span>
+          <div class="task-mock-body">
+            <div class="task-mock-textarea">
+              The API rate-limiter is breaking under load.<br>
+              Failing test: src/api/limiter.test.ts<br>
+              Can you fix the sliding window logic?
             </div>
-            <div class="task-mock-body">
-              <div class="task-mock-textarea">
-                The API rate-limiter is breaking under load.<br>
-                The failing test is in src/api/limiter.test.ts.<br>
-                Can you look at it and fix the sliding window logic?
-              </div>
-              <div class="task-mock-hint">⌘↵ to send</div>
-            </div>
-            <div class="task-mock-footer">
-              <span class="task-mock-cancel">Cancel</span>
-              <span class="task-mock-send">Send task</span>
-            </div>
+            <div class="task-mock-hint">⌘↵ to send</div>
+          </div>
+          <div class="task-mock-footer">
+            <span class="task-mock-cancel">Cancel</span>
+            <span class="task-mock-send">Send task</span>
           </div>
         </div>
       </div>
     </div>
 
     <!-- Co-pilot -->
-    <div class="multi-mode" id="mode-copilot">
+    <div class="multi-mode">
       <div class="multi-mode-copy">
-        <div class="multi-mode-tag" style="color: var(--blue)">CO-PILOT</div>
-        <h3>Merge cockpits.<br>Code together.</h3>
-        <p>Invite a friend to co-pilot. Both of your agent panes stream bidirectionally
-           into a shared workspace — you see theirs, they see yours.
-           One brain, two cockpits, every agent running in parallel.</p>
+        <div class="multi-mode-tag" style="color:var(--blue)">CO-PILOT</div>
+        <h3>Merge cockpits. Code together.</h3>
+        <p>Invite a friend to co-pilot. Both of your panes stream bidirectionally into a shared workspace — you see theirs, they see yours, every agent running in parallel.</p>
         <ul class="multi-mode-bullets">
-          <li><span class="bullet-dot" style="background:var(--blue)"></span>Bidirectional stream — both sides see both sides</li>
-          <li><span class="bullet-dot" style="background:var(--blue)"></span>Live layout sync as panes open and close</li>
-          <li><span class="bullet-dot" style="background:var(--blue)"></span>Ends cleanly — streams stop, workspace closes</li>
+          <li><span class="bullet-dot" style="background:var(--blue)"></span>Bidirectional · both sides see both sides</li>
+          <li><span class="bullet-dot" style="background:var(--blue)"></span>Layout syncs live as panes open and close</li>
         </ul>
       </div>
       <div class="multi-mode-visual">
-        <div class="mini-window mini-window-wide">
+        <div class="mini-window">
           <div class="mini-titlebar">
             <span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span>
             <span class="live-badge" style="margin-left:8px">LIVE</span>
@@ -258,7 +230,7 @@
           <div class="copilot-mock-grid">
             <div class="copilot-mock-tile">
               <div class="copilot-tile-label"><span class="live-badge live-badge-sm">LIVE</span> ada · api-server</div>
-              <div class="pane-term" style="font-size:9.5px; padding:8px">
+              <div class="pane-term" style="font-size:9.5px;padding:8px">
                 <span class="prompt">$</span> claude --dangerously-skip-permissions<br>
                 <span class="mint">●</span> Designing REST endpoints<br>
                 <span class="dim">  → src/api/routes.ts</span>
@@ -266,23 +238,23 @@
             </div>
             <div class="copilot-mock-tile">
               <div class="copilot-tile-label"><span class="live-badge live-badge-sm">LIVE</span> ada · tests</div>
-              <div class="pane-term" style="font-size:9.5px; padding:8px">
+              <div class="pane-term" style="font-size:9.5px;padding:8px">
                 <span class="prompt">$</span> claude --dangerously-skip-permissions<br>
                 <span class="mint">●</span> Writing integration tests<br>
                 <span class="dim">  22 passing / 1 failing</span>
               </div>
             </div>
-            <div class="copilot-mock-tile" style="border-color: var(--blue)">
+            <div class="copilot-mock-tile" style="border-color:var(--blue)">
               <div class="copilot-tile-label"><span class="live-badge live-badge-sm" style="background:var(--blue);color:#04080c">LIVE</span> you · frontend</div>
-              <div class="pane-term" style="font-size:9.5px; padding:8px">
+              <div class="pane-term" style="font-size:9.5px;padding:8px">
                 <span class="prompt">$</span> claude --dangerously-skip-permissions<br>
                 <span class="mint">●</span> Building API client layer<br>
                 <span class="dim">  → src/lib/api.ts</span>
               </div>
             </div>
-            <div class="copilot-mock-tile" style="border-color: var(--blue)">
+            <div class="copilot-mock-tile" style="border-color:var(--blue)">
               <div class="copilot-tile-label"><span class="live-badge live-badge-sm" style="background:var(--blue);color:#04080c">LIVE</span> you · styles</div>
-              <div class="pane-term" style="font-size:9.5px; padding:8px">
+              <div class="pane-term" style="font-size:9.5px;padding:8px">
                 <span class="prompt">$</span> opencode -c<br>
                 <span class="yellow">◐</span> Styling dashboard<span class="cursor">▌</span>
               </div>
@@ -291,81 +263,25 @@
         </div>
       </div>
     </div>
+
   </section>
 
-  <!-- ─── Features ─────────────────────────────────────────────────────────── -->
-  <section class="features" id="solo-features">
-    <div class="features-grid">
-
-      <div class="feature">
-        <div class="feature-icon">⊞</div>
-        <h3>Tiled panes</h3>
-        <p>Split your screen into 1, 2, 4, 6, 8, or 12 panes. Each runs a fully
-           independent PTY — resize, close, or zoom any pane with a keystroke.</p>
-      </div>
-
-      <div class="feature">
-        <div class="feature-icon">⟳</div>
-        <h3>Any agent</h3>
-        <p>Claude Code, opencode, Codex, or any CLI tool that speaks a terminal.
-           Mix and match agents across panes in the same workspace.</p>
-      </div>
-
-      <div class="feature">
-        <div class="feature-icon">◈</div>
-        <h3>Workspace isolation</h3>
-        <p>Group panes into named workspaces — each with its own repo, branch,
-           and layout. Switch contexts instantly; state persists across restarts.</p>
-      </div>
-
-      <div class="feature">
-        <div class="feature-icon">⊙</div>
-        <h3>GitHub PR review</h3>
-        <p>See your open PRs in the sidebar. Click one to inspect CI checks and
-           review comments, then spawn an agent to review it — or review all at once.</p>
-      </div>
-
-      <div class="feature">
-        <div class="feature-icon">●</div>
-        <h3>Friends &amp; presence</h3>
-        <p>See which of your GitHub mutual follows are running Clarence right now
-           and how many agents they have active. Ambient awareness, no chat required.</p>
-      </div>
-
-      <div class="feature">
-        <div class="feature-icon">◎</div>
-        <h3>Accent colors</h3>
-        <p>Each workspace gets its own color. Pane borders, sidebar indicators,
-           and agent groups all follow it — so your eyes never lose context.</p>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ─── Open source ───────────────────────────────────────────────────────── -->
-  <section class="oss-section">
-    <div class="oss-inner">
-      <div class="oss-tag">// OPEN SOURCE</div>
-      <h2>Built in the open.</h2>
-      <p>Clarence is MIT-licensed. The Rust core, the Tauri backend, and every
-         line of the React frontend are on GitHub. File issues, fork it, ship improvements.</p>
-      <a href="https://github.com/remiminnebo/clarence-code" class="btn-outline" target="_blank" rel="noreferrer">
-        github.com/remiminnebo/clarence-code →
+  <!-- ─── Bottom CTA ────────────────────────────────────────────────────────── -->
+  <section class="bottom-section">
+    <div class="bottom-inner">
+      <h2>Ready to run your agents?</h2>
+      <p>Free. Open source. MIT licensed.<br>
+         <a href="https://github.com/remiminnebo/clarence-code" target="_blank" rel="noreferrer" style="color:var(--text-mid)">github.com/remiminnebo/clarence-code</a>
+      </p>
+      <a href="https://github.com/remiminnebo/clarence-code/releases/latest/download/Clarence_aarch64.dmg"
+         class="btn-download btn-download-large">
+        <svg class="apple-icon" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+        </svg>
+        Download for Mac
+        <span class="btn-sub">Apple Silicon &amp; Intel · macOS 13+</span>
       </a>
     </div>
-  </section>
-
-  <!-- ─── CTA ──────────────────────────────────────────────────────────────── -->
-  <section class="cta-section">
-    <h2>Ready to run your agents?</h2>
-    <a href="https://github.com/remiminnebo/clarence-code/releases/latest/download/Clarence_aarch64.dmg"
-       class="btn-download btn-download-large">
-      <svg class="apple-icon" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
-      </svg>
-      Download for Mac
-      <span class="btn-sub">Free · Open source · macOS 13+</span>
-    </a>
   </section>
 
   <!-- ─── Footer ───────────────────────────────────────────────────────────── -->

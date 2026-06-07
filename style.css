@@ -89,9 +89,9 @@ a { color: inherit; text-decoration: none; }
 /* ─── Hero ───────────────────────────────────────────────────────────────── */
 
 .hero {
-  max-width: 760px;
+  max-width: 720px;
   margin: 0 auto;
-  padding: 100px 40px 72px;
+  padding: 88px 40px 56px;
   text-align: center;
 }
 
@@ -119,12 +119,39 @@ a { color: inherit; text-decoration: none; }
   color: var(--mint);
 }
 
+.hero-pills {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 28px;
+}
+
+.pill {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+
+.pill-mint   { background: rgba(79, 255, 176, 0.12); color: var(--mint);   border: 1px solid rgba(79, 255, 176, 0.25); }
+.pill-yellow { background: rgba(232,255, 58, 0.10); color: var(--yellow); border: 1px solid rgba(232,255, 58, 0.22); }
+.pill-blue   { background: rgba(77, 175,254, 0.10); color: var(--blue);   border: 1px solid rgba(77, 175,254, 0.22); }
+
+.pill-sep {
+  color: var(--text-ghost);
+  font-size: 14px;
+}
+
 .hero-sub {
   font-size: 18px;
   color: var(--text-mid);
   line-height: 1.65;
   max-width: 540px;
-  margin: 0 auto 40px;
+  margin: 0 auto 28px;
 }
 
 .hero-actions {
@@ -135,30 +162,21 @@ a { color: inherit; text-decoration: none; }
   flex-wrap: wrap;
 }
 
-.hero-note {
-  margin-top: 20px;
-  font-family: var(--font-mono);
-  font-size: 11px;
-  color: var(--text-ghost);
-  letter-spacing: 0.5px;
-}
-
 /* ─── Buttons ────────────────────────────────────────────────────────────── */
 
 .btn-download {
   display: inline-flex;
-  flex-direction: column;
   align-items: center;
-  gap: 3px;
+  gap: 8px;
   background: var(--mint);
   color: #040608;
-  padding: 14px 28px 12px;
+  padding: 12px 22px;
   border-radius: 10px;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 15px;
   letter-spacing: -0.2px;
+  white-space: nowrap;
   transition: opacity 0.12s ease-out, transform 0.1s ease-out;
-  line-height: 1.2;
 }
 
 .btn-download:hover {
@@ -167,34 +185,22 @@ a { color: inherit; text-decoration: none; }
 }
 
 .btn-download svg.apple-icon {
-  display: inline;
-  width: 18px;
-  height: 18px;
-  margin-right: 6px;
-  vertical-align: middle;
-  margin-bottom: 2px;
-}
-
-.btn-download {
-  flex-direction: row;
-  align-items: center;
-  gap: 0;
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
 }
 
 .btn-sub {
-  display: block;
   font-family: var(--font-mono);
   font-size: 10px;
   font-weight: 400;
-  color: rgba(4, 6, 8, 0.6);
-  letter-spacing: 0.3px;
-  margin-left: 4px;
+  color: rgba(4, 6, 8, 0.55);
+  letter-spacing: 0.2px;
 }
 
 .btn-download-large {
-  padding: 18px 36px 16px;
-  font-size: 18px;
-  border-radius: 12px;
+  padding: 14px 28px;
+  font-size: 16px;
 }
 
 .btn-ghost {
@@ -348,6 +354,31 @@ a { color: inherit; text-decoration: none; }
   text-overflow: ellipsis;
 }
 
+.mock-friend {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 2px 14px;
+  font-size: 10px;
+  color: var(--text-mid);
+}
+
+.mock-friend-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--text-ghost);
+  flex-shrink: 0;
+}
+.mock-friend-dot.online { background: var(--mint); }
+
+.mock-friend-count {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  color: var(--mint);
+  margin-left: auto;
+}
+
 .mockup-panes {
   flex: 1;
   display: grid;
@@ -393,13 +424,13 @@ a { color: inherit; text-decoration: none; }
 
 /* ─── Multiplayer section ────────────────────────────────────────────────── */
 
-.multi-hero {
-  padding: 100px 40px 0;
+.multi-section {
+  padding: 100px 40px 40px;
   max-width: 1100px;
   margin: 0 auto;
 }
 
-.multi-hero-inner {
+.multi-intro {
   text-align: center;
   max-width: 640px;
   margin: 0 auto 80px;
