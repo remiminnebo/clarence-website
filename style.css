@@ -888,6 +888,36 @@ a { color: inherit; text-decoration: none; }
   margin-bottom: 36px;
 }
 
+/* ─── Bottom CTA ─────────────────────────────────────────────────────────── */
+
+.bottom-section {
+  border-top: 1px solid var(--border);
+  padding: 80px 40px;
+  text-align: center;
+}
+
+.bottom-inner {
+  max-width: 480px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.bottom-inner h2 {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: clamp(26px, 4vw, 38px);
+  letter-spacing: -0.7px;
+}
+
+.bottom-inner p {
+  font-size: 14px;
+  color: var(--text-mid);
+  line-height: 1.6;
+}
+
 /* ─── Footer ─────────────────────────────────────────────────────────────── */
 
 .footer {
